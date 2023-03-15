@@ -5,7 +5,7 @@ np.set_printoptions(precision=2)
 
 
 def load_house_data():
-    data = np.loadtxt("houses.txt", delimiter=',', skiprows=1)
+    data = np.loadtxt("_data.txt", delimiter=',', skiprows=1)
     X = data[:, :4]
     y = data[:, 4]
     return X, y
