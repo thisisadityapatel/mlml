@@ -8,6 +8,7 @@ def load_house_data():
     data = np.loadtxt("_data.txt", delimiter=',', skiprows=1)
     X = data[:, :4]
     y = data[:, 4]
+    print(X)
     return X, y
 
 
