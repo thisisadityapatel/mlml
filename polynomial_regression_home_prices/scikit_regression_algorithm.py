@@ -37,6 +37,5 @@ y_pred_sgd = sgdr.predict(X_norm)
 # COMPARING THE TWO DATA
 print("Prediction Data: ")
 print(y_pred_sgd)
-print()
 print("Training Data Ouput: ")
 print(y_train)
