@@ -50,15 +50,15 @@ def compute_gradient_descent(x, y, w_initial, b_initial, iterations, alpha):
     for i in range(iterations):
         dj_dw, dj_db = compute_gradient(x, y, w, b)  # None
 
-        # Updating the new w and b parameters
+        # updating the new w and b parameters
         w = w - alpha * dj_dw
         b = b - alpha * dj_db
 
-        # Save cost J at each iteration
+        # saving cost J at each iteration
         if i < 100000:      # for safety
             J_tracker.append(compute_cost(x, y, w, b))
 
-        # Print cost every at intervals 10 times or as many iterations if < 10
+        # printing cost every at intervals 10 times or as many iterations if < 10
         if i % math.ceil(iterations / 10) == 0:
             print(f"Iteration {i:4d}: Cost {J_tracker[-1]:8.2f}   ")
 

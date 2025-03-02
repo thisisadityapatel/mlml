@@ -34,17 +34,17 @@ def compute_gradient(x, y, w, b):
 
 # computing the gradient descent function
 def gradient_descent(x, y, w_in, b_in, alpha, num_iters):
-    # An array to store cost J and w's at each iteration primarily for graphing later
+    # array to store cost J and w's at each iteration primarily for graphing later
     J_history = []
     p_history = []
     b = b_in
     w = w_in
 
     for i in range(num_iters):
-        # Calculate the gradient and update the parameters using gradient_function
+        # calculating the gradient and update the parameters using gradient_function
         dj_dw, dj_db = compute_gradient(x, y, w, b)
 
-        # Update Parameters using equation (3) above
+        # updating Parameters using equation (3) above
         b = b - alpha * dj_db
         w = w - alpha * dj_dw
 
@@ -52,7 +52,7 @@ def gradient_descent(x, y, w_in, b_in, alpha, num_iters):
             J_history.append(compute_cost(x, y, w, b))
             p_history.append([w, b])
 
-        # Displaying the ouputs every other interval
+        # displaying the ouputs every other interval
         if i % math.ceil(num_iters/10) == 0:
             print(f"Iteration {i:4}: Cost {J_history[-1]:0.2e} ",
                   f"dj_dw: {dj_dw: 0.3e}, dj_db: {dj_db: 0.3e}  ",
