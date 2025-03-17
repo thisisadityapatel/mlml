@@ -1,1 +1,1 @@
-me learning machine learning (mostly off of deeplearning.ai and experimentation)
+Collection of machine learning algorithms, neural networks, optimization methods, and evaluation techniques. Includes implementations and comprehensive documentation for practical application and experimentation.
